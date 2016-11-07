@@ -1,0 +1,36 @@
+Q1
+=====INPUT=====
+c
+u 1000
+c
+u -100
+c
+=====SERVER OUTPUT=====
+0
+1000
+1000
+900
+900
+=====END OUTPUT=====
+
+
+Q2
+=====INPUT=====
+c
+u 1000
+c
+u -100
+c
+=====PROXY OUTPUT=====
+(In Proxy)
+(In Proxy)
+(In Proxy)
+(In Proxy)
+(In Proxy)
+=====SERVER OUTPUT=====
+0
+1000
+1000
+900
+900
+=====END OUTPUT=====

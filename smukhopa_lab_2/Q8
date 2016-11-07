@@ -1,0 +1,5 @@
+What happens when there is a server failure?
+The only thing that happens is that the connection between the server and the proxy is terminated. However, we do not need to handle this in any special way because all the servers have the exact identical data and in active replication all the servers are sending us the data and we are only suppressing duplicates. If the one of the servers fail, we will simply not reveive that duplicate, which has bo effect on the overall result that is sent to the client. This is true if there are (n) servers and (n-1) servers fail. However, if n servers fail, then the client will be unable to access the data.
+
+Comaparison to Lab 1.
+There is no concept of failover, as there's no dedicated "Active" server. Since all servers act as active servers, no special measures have to be taken if a server fails. Compared to lab 1, this is very different, as we had to maintian an Active server, which if failed, another server had to take over its place. This process was known as fail-over.
